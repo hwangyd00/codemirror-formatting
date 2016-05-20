@@ -1,4 +1,7 @@
-(function() {
+require([
+    "external/codemirror/lib/codemirror"
+  ], function(CodeMirror) {
+"use strict";
 
   CodeMirror.extendMode("css", {
     commentStart: "/*",
@@ -105,5 +108,4 @@
       cm.setSelection(from, cm.getCursor(false));
     });
   });
-})();
-
+})
